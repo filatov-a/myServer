@@ -1,0 +1,12 @@
+{
+    "appPort": "8080",
+    "appTestPort": "3002",
+    "mainUrl": "{{MAIN_URL}}",
+    "adminUrl": "http://localhost:3000",
+    "https" : false,
+
+    "tokenEmailKey": "kjdnwkndei83290023e",
+    "tokenLoginKey": "jdwjdeiwdoiewkedo32920",
+
+    "dirCreatedModels": "/created-models"
+}
