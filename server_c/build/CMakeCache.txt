@@ -225,6 +225,15 @@ app_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 app_SOURCE_DIR:STATIC=/Users/f/Desktop/b/server_c/src
 
+//Value Computed by CMake
+src_BINARY_DIR:STATIC=/Users/f/Desktop/b/server_c/build/src
+
+//Value Computed by CMake
+src_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+src_SOURCE_DIR:STATIC=/Users/f/Desktop/b/server_c/src
+
 
 ########################
 # INTERNAL cache entries

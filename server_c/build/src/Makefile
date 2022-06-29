@@ -130,6 +130,30 @@ app/fast:
 	cd /Users/f/Desktop/b/server_c/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/app.dir/build.make src/CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+app.o: app.cpp.o
+.PHONY : app.o
+
+# target to build an object file
+app.cpp.o:
+	cd /Users/f/Desktop/b/server_c/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/app.dir/build.make src/CMakeFiles/app.dir/app.cpp.o
+.PHONY : app.cpp.o
+
+app.i: app.cpp.i
+.PHONY : app.i
+
+# target to preprocess a source file
+app.cpp.i:
+	cd /Users/f/Desktop/b/server_c/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/app.dir/build.make src/CMakeFiles/app.dir/app.cpp.i
+.PHONY : app.cpp.i
+
+app.s: app.cpp.s
+.PHONY : app.s
+
+# target to generate assembly for a file
+app.cpp.s:
+	cd /Users/f/Desktop/b/server_c/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/app.dir/build.make src/CMakeFiles/app.dir/app.cpp.s
+.PHONY : app.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -163,6 +187,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
+	@echo "... app.o"
+	@echo "... app.i"
+	@echo "... app.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

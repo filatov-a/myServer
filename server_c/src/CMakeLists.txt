@@ -6,4 +6,4 @@ file(GLOB app_SRCS "*.cpp")
 
 add_executable (${PROJECT_NAME} ${app_SRCS})
 
-target_link_libraries(${PROJECT_NAME})
+# target_link_libraries(${PROJECT_NAME})

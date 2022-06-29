@@ -1,4 +1,4 @@
-src/CMakeFiles/app.dir/main.cpp.o: \
+src/CMakeFiles/src.dir/main.cpp.o: \
   /Users/f/Desktop/b/server_c/src/main.cpp \
   /Users/f/Desktop/b/server_c/src/app.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
