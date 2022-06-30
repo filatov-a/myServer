@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/f/Desktop/b/server_c/build/src/cmake_install.cmake")
+  include("/Users/f/Desktop/b/server_c/build/curl/cmake_install.cmake")
 
 endif()
 

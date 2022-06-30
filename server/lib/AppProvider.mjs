@@ -14,12 +14,10 @@ export default class AppProvider {
     params = {};
 
     static create() {
-        console.log("create APP")
         return new this();
     }
 
     initApp() {
-        console.log("init APP")
         this.config = config;
         this.api = api;
         this.dbConfig = dbConfig;
@@ -31,7 +29,7 @@ export default class AppProvider {
     }
 
     start(params = {}) {
-        this.api.init({ sequelize: this.sequelize});
+        this.api.init({ sequelize: this.sequelize });
         this.api.start({
             appPort : this.config.appPort,
             secure  : this.config?.https,
@@ -40,21 +38,12 @@ export default class AppProvider {
     }
 
     initDb() {
-        console.log("init Db")
-        const {sequelize, models} = initModels(this.dbConfig, this.params);
-        this.sequelize = sequelize;
-        this.models = models;
-    }
+        const { sequelize } = initModels(this.dbConfig, this.params);
 
-    getTable(tableName){
-        for (let i = 0; i < this.models.length; i++){
-            if (this.models[i].TableName === tableName) return this.models[i];
-        }
+        this.sequelize = sequelize;
     }
 
     initUseCases() {
-        console.log("init use cases")
-        UseCaseBase.setApp(this)
         UseCaseBase.setSequelizeInstanse(this.sequelize);
         UseCaseBase.setAppConfig(this.config);
     }

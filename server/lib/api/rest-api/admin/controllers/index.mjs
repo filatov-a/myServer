@@ -1,5 +1,7 @@
-import protocol        from './protocol.mjs';
+import users        from './users.mjs';
+import authentication        from './authentication.mjs';
 
 export default {
-    protocol,
+    users,
+    authentication,
 };

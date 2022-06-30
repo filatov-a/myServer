@@ -6,8 +6,8 @@ class Base extends Sequelize.Model {
             this.generateSchema();
         }
 
-        super.init(this.ModelSchema, {
-            tableName : this.TableName,
+        super.init(this.modelSchema, {
+            tableName : this.tableName,
             ...options,
             sequelize,
             ...this.options

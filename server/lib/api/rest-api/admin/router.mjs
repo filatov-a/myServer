@@ -8,16 +8,21 @@ const router = express.Router();
 // const { fileUpload, detectDevice, detectIp, sequelizeSession, errorHandler } = middlewares;
 // const { check } = controllers.sessions;
 
-export default function init({ sequelize }) {
+export default function init() {
     // router.use(sequelizeSession({ sequelize }));
     // router.use(fileUpload().any());
     // router.use(csrfProtection);
 
-    // protocol
-    router.get('/protocols',  controllers.protocol.show);
-    router.get('/protocols/:table_name',  controllers.protocol.getOne);
+    // users
+    router.get('/users',  controllers.users.show);
+    router.get('/users/:id',  controllers.users.getOne);
+    router.post('/update-verify',  controllers.users.getUpdateToken);
+    router.patch('/users/:token',  controllers.users.update);
 
-    router.post('/protocol/:table_name',  controllers.protocol.add);
+    // authentication
+    router.post('/login',  controllers.authentication.login);
+    router.post('/register',  controllers.authentication.register);
+    router.get('/verify-email/:token',  controllers.authentication.emailVerify);
 
     // router.use(errorHandler);
 

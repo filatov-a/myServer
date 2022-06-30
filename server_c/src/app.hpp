@@ -1,14 +1,20 @@
+#ifndef app_hpp
+#define app_hpp
+
 #include <iostream>
+#include "server.hpp"
+#include "client.hpp"
+#include "web.hpp"
 
 class App {
-    int s;
-    int ret;
-    int client;
+    char* host;
+    int port;
 
-    char* host = "127.0.0.1";
-    int port = 9821;
+    char* host_storege_server;
 
-    std::string m;
+    Server* s;
+    Client* c;
+    Web* w;
 
     enum STAGE{
         START,
@@ -35,7 +41,9 @@ class App {
     STAGE end();
 public:
     App();
-    ~App(){};
+    ~App();
 
     void run();
 };
+
+#endif

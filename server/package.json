@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "backend",
   "type": "module",
   "version": "1.0.0",
   "description": "",
@@ -21,8 +21,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "flat": "^5.0.2",
-    "fs": "^0.0.1-security",
-    "gpg": "^0.6.0",
     "i": "^0.3.7",
     "jsonwebtoken": "^8.5.1",
     "livr": "^2.3.3",
@@ -30,10 +28,8 @@
     "lodash": "^4.17.21",
     "mysql2": "^2.3.3",
     "node-fetch": "^3.2.4",
-    "node-ssh": "^12.0.4",
     "nodemailer": "^6.7.4",
     "npm": "^8.6.0",
-    "path": "^0.12.7",
     "sequelize": "^6.17.0",
     "uuidv4": "^6.2.13"
   },
@@ -55,7 +51,6 @@
     "sequelize-cli": "^6.4.1"
   },
   "imports": {
-    "#global-config": "./config/config.json",
-    "#global-dbConfig": "./config/db.json"
+    "#global-config": "./config/config.json"
   }
 }

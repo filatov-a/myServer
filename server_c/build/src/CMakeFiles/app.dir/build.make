@@ -83,10 +83,24 @@ src/CMakeFiles/app.dir/app.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/app.cpp.s"
 	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/f/Desktop/b/server_c/src/app.cpp -o CMakeFiles/app.dir/app.cpp.s
 
+src/CMakeFiles/app.dir/client.cpp.o: src/CMakeFiles/app.dir/flags.make
+src/CMakeFiles/app.dir/client.cpp.o: ../src/client.cpp
+src/CMakeFiles/app.dir/client.cpp.o: src/CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/app.dir/client.cpp.o"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/app.dir/client.cpp.o -MF CMakeFiles/app.dir/client.cpp.o.d -o CMakeFiles/app.dir/client.cpp.o -c /Users/f/Desktop/b/server_c/src/client.cpp
+
+src/CMakeFiles/app.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/client.cpp.i"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/f/Desktop/b/server_c/src/client.cpp > CMakeFiles/app.dir/client.cpp.i
+
+src/CMakeFiles/app.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/client.cpp.s"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/f/Desktop/b/server_c/src/client.cpp -o CMakeFiles/app.dir/client.cpp.s
+
 src/CMakeFiles/app.dir/main.cpp.o: src/CMakeFiles/app.dir/flags.make
 src/CMakeFiles/app.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/app.dir/main.cpp.o: src/CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/app.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/app.dir/main.cpp.o"
 	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/app.dir/main.cpp.o -MF CMakeFiles/app.dir/main.cpp.o.d -o CMakeFiles/app.dir/main.cpp.o -c /Users/f/Desktop/b/server_c/src/main.cpp
 
 src/CMakeFiles/app.dir/main.cpp.i: cmake_force
@@ -97,19 +111,53 @@ src/CMakeFiles/app.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/main.cpp.s"
 	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/f/Desktop/b/server_c/src/main.cpp -o CMakeFiles/app.dir/main.cpp.s
 
+src/CMakeFiles/app.dir/server.cpp.o: src/CMakeFiles/app.dir/flags.make
+src/CMakeFiles/app.dir/server.cpp.o: ../src/server.cpp
+src/CMakeFiles/app.dir/server.cpp.o: src/CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/app.dir/server.cpp.o"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/app.dir/server.cpp.o -MF CMakeFiles/app.dir/server.cpp.o.d -o CMakeFiles/app.dir/server.cpp.o -c /Users/f/Desktop/b/server_c/src/server.cpp
+
+src/CMakeFiles/app.dir/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/server.cpp.i"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/f/Desktop/b/server_c/src/server.cpp > CMakeFiles/app.dir/server.cpp.i
+
+src/CMakeFiles/app.dir/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/server.cpp.s"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/f/Desktop/b/server_c/src/server.cpp -o CMakeFiles/app.dir/server.cpp.s
+
+src/CMakeFiles/app.dir/web.cpp.o: src/CMakeFiles/app.dir/flags.make
+src/CMakeFiles/app.dir/web.cpp.o: ../src/web.cpp
+src/CMakeFiles/app.dir/web.cpp.o: src/CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/app.dir/web.cpp.o"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/app.dir/web.cpp.o -MF CMakeFiles/app.dir/web.cpp.o.d -o CMakeFiles/app.dir/web.cpp.o -c /Users/f/Desktop/b/server_c/src/web.cpp
+
+src/CMakeFiles/app.dir/web.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/web.cpp.i"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/f/Desktop/b/server_c/src/web.cpp > CMakeFiles/app.dir/web.cpp.i
+
+src/CMakeFiles/app.dir/web.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/web.cpp.s"
+	cd /Users/f/Desktop/b/server_c/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/f/Desktop/b/server_c/src/web.cpp -o CMakeFiles/app.dir/web.cpp.s
+
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/app.cpp.o" \
-"CMakeFiles/app.dir/main.cpp.o"
+"CMakeFiles/app.dir/client.cpp.o" \
+"CMakeFiles/app.dir/main.cpp.o" \
+"CMakeFiles/app.dir/server.cpp.o" \
+"CMakeFiles/app.dir/web.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
 src/app: src/CMakeFiles/app.dir/app.cpp.o
+src/app: src/CMakeFiles/app.dir/client.cpp.o
 src/app: src/CMakeFiles/app.dir/main.cpp.o
+src/app: src/CMakeFiles/app.dir/server.cpp.o
+src/app: src/CMakeFiles/app.dir/web.cpp.o
 src/app: src/CMakeFiles/app.dir/build.make
 src/app: src/CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/f/Desktop/b/server_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable app"
 	cd /Users/f/Desktop/b/server_c/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,19 +1,25 @@
 #include "app.hpp"
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <unistd.h>
-#include <iostream>
-#include <string.h>
-#include <string>
 
 App::App(){
+    host = "127.0.0.1";
+    port = 7654;
+    host_storege_server = "http://localhost:8080/api/v1/";
+
+    w = new Web();
+    s = new Server(host, port);
+    c = new Client(host, port);
     stage = START;
 }
 
+App::~App(){
+    delete w;
+    delete s;
+    delete c;
+    stage = UNDEF;
+}
+
 void App::run(){
-    while (stage != UNDEF || stage != ERROR){
+    while (stage != ERROR && stage != UNDEF){
         switch (stage){
             case START:
                 stage = start();
@@ -43,50 +49,16 @@ void App::run(){
     }
 }
 
-App::STAGE App::start(){
-    printf("start\n");
-    s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    sockaddr_in sa;
-    
-    sa.sin_family = AF_INET;
-    ret = inet_aton(host, &sa.sin_addr);//my id
-    if (ret == 0){
-        std::cout << "error adress convertion" << std::endl;
-        return ERROR;
-    }
-    
-    sa.sin_port = htons(port);
-    ret = bind(s, (sockaddr*)&sa, sizeof(sa));
-    if (ret != 0){
-        std::cout << "error bind" << std::endl;
-        close(s);
-        return ERROR;
-    }
+// stage function
 
-    int l = listen(s, 1);
-    if (l != 0){
-        close(s);
-        return ERROR;
-    }
-    std::cout << "app, host: " << host << ", port: " << port << std::endl;
+App::STAGE App::start(){
     return WAIT_REQ;
 }
 
 App::STAGE App::wait_req(){
-    sockaddr_in s_client;
-    socklen_t len = sizeof(s_client);
-    client = accept(s, (sockaddr*)&s_client, &len);
-
-    do {
-        char c;
-        ret = recv(client, (void*)&c, 1, 0);
-        if (ret > 0){
-            m.push_back(c);
-        }
-    } while (ret > 0);
-    
-    close(client);
-    close(s);
+    if (!s->run()){
+        return ERROR;
+    }
     return DECRYPT_REQ;
 }
 
@@ -103,11 +75,10 @@ App::STAGE App::encrypt_res(){
 }
 
 App::STAGE App::push_res(){
-    printf("%s", m.c_str());
+    w->sendMethod(host_storege_server, "POST", "data=data&name=name");
     return END;
 }
 
 App::STAGE App::end(){
-    m.clear();
     return START;
 }
