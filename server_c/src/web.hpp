@@ -16,6 +16,8 @@ public:
     bool sendMethod(const std::string& host,
                     const std::string& type, 
                     const std::string& body = "");
+
+    CURLcode getRes(){return res;}
 };
 
 #endif

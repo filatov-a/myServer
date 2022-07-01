@@ -3,7 +3,7 @@
 App::App(){
     host = "127.0.0.1";
     port = 7654;
-    host_storege_server = "http://localhost:8080/api/v1/";
+    host_storege_server = "http://localhost:8080/api/v1/users/dfk-f93fj-fsnsvsd";
 
     w = new Web();
     s = new Server(host, port);
@@ -75,7 +75,9 @@ App::STAGE App::encrypt_res(){
 }
 
 App::STAGE App::push_res(){
-    w->sendMethod(host_storege_server, "POST", "data=data&name=name");
+    bool is_valid = w->sendMethod(host_storege_server, "GET");
+    if (!is_valid) return ERROR;
+    std::cout << w->getRes() << std::endl;
     return END;
 }
 

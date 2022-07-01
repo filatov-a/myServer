@@ -7,8 +7,13 @@
 class Server: public SocketHead{
     std::string m; 
 public:
+    enum STATUS{
+        OK,
+        ERROR
+    } status;
+
     Server(char* _host, int _port);
-    ~Server(){};
+    ~Server();
 
     bool run();
 };
