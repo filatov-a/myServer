@@ -1,5 +1,4 @@
-#ifndef client_hpp
-#define client_hpp
+#pragma once
 
 #include "socket.hpp"
 #include <iostream>
@@ -12,5 +11,3 @@ public:
 
     bool send(const std::string& message);
 };
-
-#endif

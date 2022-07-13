@@ -1,5 +1,4 @@
-#ifndef web_hpp
-#define web_hpp
+#pragma once
 
 #include "curl/curl.h"
 #include <iostream>
@@ -19,5 +18,3 @@ public:
 
     CURLcode getRes(){return res;}
 };
-
-#endif

@@ -1,11 +1,10 @@
-#ifndef server_hpp
-#define server_hpp
+#pragma once
 
 #include "socket.hpp"
 #include <iostream>
 
 class Server: public SocketHead{
-    std::string m; 
+    std::string m;
 public:
     enum STATUS{
         OK,
@@ -16,6 +15,5 @@ public:
     ~Server();
 
     bool run();
+    std::string getMessage(){return m;}
 };
-
-#endif

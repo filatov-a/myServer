@@ -1,5 +1,4 @@
-#ifndef app_hpp
-#define app_hpp
+#pragma once
 
 #include <iostream>
 #include "server.hpp"
@@ -45,5 +44,3 @@ public:
 
     void run();
 };
-
-#endif

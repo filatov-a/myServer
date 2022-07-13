@@ -1,5 +1,4 @@
-#ifndef socket_hpp
-#define socket_hpp
+#pragma once
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -19,5 +18,3 @@ struct SocketHead{
     sockaddr_in sa;
     sockaddr_in sd;
 };
-
-#endif 

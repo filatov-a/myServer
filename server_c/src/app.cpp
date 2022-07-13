@@ -1,4 +1,5 @@
 #include "app.hpp"
+#include <iostream>
 
 App::App(){
     host = "127.0.0.1";
@@ -59,6 +60,7 @@ App::STAGE App::wait_req(){
     if (!s->run()){
         return ERROR;
     }
+    std::cout << "wait_req done" << std::endl;
     return DECRYPT_REQ;
 }
 
@@ -75,9 +77,13 @@ App::STAGE App::encrypt_res(){
 }
 
 App::STAGE App::push_res(){
-    bool is_valid = w->sendMethod(host_storege_server, "GET");
-    if (!is_valid) return ERROR;
-    std::cout << w->getRes() << std::endl;
+    std::string tmp;
+    tmp = "data=";
+    tmp += s->getMessage();
+    std::cout << tmp << std::endl;
+    // bool is_valid = w->sendMethod(host_storege_server, "POST", tmp);
+    // if (!is_valid) return ERROR;
+    // std::cout << w->getRes() << std::endl;
     return END;
 }
 
