@@ -1,4 +1,4 @@
-#include "app.hpp"
+#include "app.hh"
 #include <iostream>
 
 App::App(){
@@ -9,6 +9,8 @@ App::App(){
     w = new Web();
     s = new Server(host, port);
     c = new Client(host, port);
+    ai = new AI();
+    ai->run();
     stage = START;
 }
 
@@ -16,6 +18,7 @@ App::~App(){
     delete w;
     delete s;
     delete c;
+    delete ai;
     stage = UNDEF;
 }
 
@@ -53,7 +56,8 @@ void App::run(){
 // stage function
 
 App::STAGE App::start(){
-    return WAIT_REQ;
+    // return WAIT_REQ;
+    return UNDEF;
 }
 
 App::STAGE App::wait_req(){

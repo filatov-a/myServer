@@ -1,6 +1,6 @@
 #pragma once
 
-#include "socket.hpp"
+#include "socket.hh"
 #include <iostream>
 
 class Client: public SocketHead{

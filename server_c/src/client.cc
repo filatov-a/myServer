@@ -1,4 +1,4 @@
-#include "client.hpp"
+#include "client.hh"
 
 Client::Client(char* _host, int _port){
     my_host = "127.0.0.1";

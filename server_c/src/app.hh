@@ -1,9 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include "server.hpp"
-#include "client.hpp"
-#include "web.hpp"
+#include "server.hh"
+#include "client.hh"
+#include "web.hh"
+#include "ai.hh"
 
 class App {
     char* host;
@@ -14,6 +15,7 @@ class App {
     Server* s;
     Client* c;
     Web* w;
+    AI* ai;
 
     enum STAGE{
         START,

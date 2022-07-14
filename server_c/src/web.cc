@@ -1,4 +1,4 @@
-#include "web.hpp"
+#include "web.hh"
 
 Web::Web(){
     curl_global_init(CURL_GLOBAL_ALL);
